@@ -10,10 +10,8 @@ public class Activity5 {
         char anotherBag;
 
         do {
-            System.out.println("\n=================================");
             System.out.println("        PURSE MAISON SHOP         ");
             System.out.println("        New Day, New Bag!           ");
-            System.out.println("=================================");
 
             System.out.print("\nBrand Name: ");
             String brandName = InputString();
@@ -36,11 +34,6 @@ public class Activity5 {
             System.out.print("Price: ");
             double bagPrice = InputDouble();
 
-            while (bagPrice <= 0) {
-                System.out.print("Invalid price. Enter again: ");
-                bagPrice = InputDouble();
-            }
-
             String paymentMethod = selectPaymentMethod();
 
             DisplayProdInfo(brandName, bagMaterial, bagSize, bagColor, bagDesign, bagHardware, bagPrice, paymentMethod);
@@ -53,8 +46,8 @@ public class Activity5 {
 
         } while (anotherBag == 'Y' || anotherBag == 'y');
         System.out.println("Total Bags Sold : " + bagCount);
-        System.out.printf("Total Sales     : ₱ %.2f",totalSales);
-        System.out.println("Thank you for shopping at Purse Maison!");
+        System.out.printf("Total Sales: Php %.2f",totalSales);
+        System.out.println("\nThank you for shopping at Purse Maison!");
     }
 
     public static String InputString() {
@@ -92,26 +85,20 @@ public class Activity5 {
             case 4: return "Check";
             case 5: return "Bank Transfer";
             default:
-            System.out.println("Invalid choice. Directly go to credit card.");
-            return "Credit Card"; 
+            System.out.println("Invalid choice. Directly go to cash.");
+            return "Cash"; 
         }
     }
 
-    public static void DisplayProdInfo(String brand, String material, String size,
-                                       String color, String design,
-                                       String hardware, double price,
-                                       String paymentMethod) {
+    public static void DisplayProdInfo(String brand, String material, String size, String color, String design, String hardware, double price, String paymentMethod) {
 
-        System.out.println("\n----------- RECEIPT -----------");
-        System.out.println("Brand: " + brand);
+        System.out.println("\nBrand: " + brand);
         System.out.println("Material: " + material);
         System.out.println("Size: " + size);
         System.out.println("Color: " + color);
         System.out.println("Design: " + design);
         System.out.println("Hardware: " + hardware);
-        System.out.println("-------------------------------");
-        System.out.printf("Price: ₱ %.2f", price);
+        System.out.printf("\nPrice: Php %.2f", price);
         System.out.println("\nPayment: " + paymentMethod);
-        System.out.println("-------------------------------");
     }
 }
