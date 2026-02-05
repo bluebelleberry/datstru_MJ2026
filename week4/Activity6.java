@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
 
-public class Activity2 {
+public class Activity6 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -25,11 +25,11 @@ public class Activity2 {
 
                     System.out.print("Product Price: ");
                     dPrice = input.nextDouble();
-                    fw.write("Price: " + dPrice + "\n");
+                    fw.write("Product Price: " + dPrice + "\n");
 
                     System.out.print("Product Quantity: ");
                     dQuantity = input.nextDouble();
-                    fw.write("Quantity: " + dQuantity + "\n");
+                    fw.write("Product Quantity: " + dQuantity + "\n");
 
                     input.nextLine(); 
                     dTotal = dQuantity * dPrice;
@@ -56,10 +56,9 @@ public class Activity2 {
                     dChange = dPayment - dBill;
                     System.out.println("Change: " + dChange);
                     fw.write("Change: " + dChange + "\n");
-                    fw.write("Status: Paid\n");
                 } else {
                     System.out.println("\nMoney is not enough!");
-                    fw.write("Status: Insufficient Payment\n");
+                    fw.write("\nMoney is not enough!");
                 }
 
                 System.out.print("\nAnother Customer? (Y/N): ");
@@ -68,7 +67,7 @@ public class Activity2 {
             } while (cCustomer == 'Y' || cCustomer == 'y');
 
             System.out.println("Grocery program terminating...");
-            fw.write("Program terminated.\n");
+            fw.write("Grocery program terminating...\n");
 
         } catch (IOException e) {
             System.out.println("File error!");
