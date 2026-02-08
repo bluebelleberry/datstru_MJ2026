@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class EFMEnterprise {
+public class Activity7 {
 
     static Scanner input = new Scanner(System.in);
 
